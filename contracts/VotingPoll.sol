@@ -35,9 +35,9 @@ contract VotingPoll {
     mapping(address => uint256) voter; // Mapping to track voters
 
     // Constructor to set the owner of the contract
-    constructor(address owner) {
-        require(owner == msg.sender, "Failed to call this operation. Check the address");
-        owner = msg.sender; // Assigning the owner
+    constructor(address _owner) {
+        require(_owner == msg.sender, "Failed to call this operation. Check the address");
+        _owner = msg.sender; // Assigning the owner
     }
 
     // Function to create a new poll
